@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>FARM FRNDZ</title>
+
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="static/css/fontAwesome.css">
+        <link rel="stylesheet" href="static/css/light-box.css">
+        <link rel="stylesheet" href="static/css/templatemo-main.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body background-image: "static/img/1st-section.jpg">
+    
+    <nav>  
+        <ul>       
+            <li><a href="index"><i class="fa fa-home"></i> <em>Home</em></a></li>
+            <li><a href="index#2"><i class="fa fa-user"></i> <em>About Us</em></a></li>
+            <li><a href="index#3"><i class="fa fa-pencil"></i> <em>Services</em></a></li>
+            <li><a href="index#4"><i class="fa fa-envelope"></i> <em>Contact</em></a></li>
+            
+          </ul>
+                </nav>
+
+  <div class="slides">
+          <div class="slide" id="3"  style="background-image: url(static/img/5th-section.jpg);">
+            <div class="content third-content">
+                <div class="container-fluid">
+                    <div class="col">
+                            <div class="row">
+                                {% if filename %}
+                                <img id="image" src="{{url_for('display_image',filename= filename)}}" width="700px" height="350px" alt=".." />
+                            {% endif %}
+                                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                                <script>
+                                    // handle double-click event
+                                    $('#image').dblclick(function(e) {
+                                        // get mouse coordinates
+                                        var x = e.offsetX;
+                                        var y = e.offsetY;
+                            
+                                        // get the filename from the image source URL
+                                        var url = $('#image').attr('src');
+                                        var filename = url.substring(url.lastIndexOf('/') + 1);
+                            
+                            // send coordinates and filename to server
+                                        $.post('/predict', {x: x, y: y, filename: filename}, function() {
+                                            alert('Double click is done')
+                                        window.location.href = '/result' ;
+                                        });
+                                    });
+                                </script>  
+                                <br><br><br>
+                                <h3>Double click on an image to predict its pH value and crop label</h3>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="content">
+              <p>Copyright &copy; 2023 Farm Frndz</p>
+          </div>
+        </div>
+ 
+  
+</body>
+</html>

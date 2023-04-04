@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>FARM FRNDZ</title>
+
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="static/css/fontAwesome.css">
+        <link rel="stylesheet" href="static/css/light-box.css">
+        <link rel="stylesheet" href="static/css/templatemo-main.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+    
+    <nav>  
+
+        <ul>       
+            <li><a href="index"><i class="fa fa-home"></i> <em>Home</em></a></li>
+            <li><a href="index#2"><i class="fa fa-user"></i> <em>About Us</em></a></li>
+            <li><a href="index#3"><i class="fa fa-pencil"></i> <em>Services</em></a></li>
+            <li><a href="index#4"><i class="fa fa-envelope"></i> <em>Contact</em></a></li>
+            <li><a href="home"><i class="fa fa-leaf"></i> <em>Predict</em></a></li>
+            <li><a href="ferti"><i class="fa fa-bug"></i> <em>Fertilizer</em></a></li>
+          </ul>
+        </nav>
+
+  <div class="slides">
+      <div class="slide" id="3"  style="background-image: url(static/img/1st-section.jpg);">
+            <div class="content first-content">
+                <div class="container-fluid">
+                   <h4>Predict NPK for the pH value and crop and also determines the Basic nutrient fertilizer and cost required for it..</h4><br>
+<form method="post" action="/fertilizer">
+   <p><label for="pH_value">pH value: <input type="text" id="pH_value" name="pH_value" style="color:black;"></label></p>
+    <p><label for="Crop">Crop Name: 
+   <select id="Crop" name="Crop" style="color:black;">
+       <option value="0">White-Rice</option>
+       <option value="1">Brown-rice</option>
+       <option value="2">Maize</option>
+       <option value="3">Chickpea</option>
+       <option value="4">Kidneybeans</option>
+      <option value="5">Mothbeans</option>
+      <option value="6">Blackgram</option>
+      <option value="7">Lentil</option>
+       <option value="8">Coffee</option>
+       <option value="9">Cotton</option>
+       <option value="10">Lady's finger</option>
+       <option value="11">Potato</option>
+       <option value="12">Tomato</option>
+       <option value="13">Brinjal</option>
+       <option value="14">Onion</option>
+       <option value="15">Carrot</option>
+       <option value="16">Watermelon</option>
+       <option value="17">Pomegranate</option>
+       <option value="18">Orange</option>
+       <option value="19">Mosambi</option>
+       <option value="20">Apple</option>
+       <option value="21">Banana</option>
+       <option value="22">Mango</option>  
+    </select></label></p>
+       
+    <p><span class ="input-group-text" id="text" ><input type="text" id="area" name="area" style="color:black;"> hectare </span><br></p>
+    <input type="submit" value="Get Fertilizer" class="btn btn-info">
+</form>
+                                
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="content">
+              <p>Copyright &copy; 2023 Farm Frndz</p>
+          </div>
+        </div>
+ 
+   
+</body>
+</html>
+
